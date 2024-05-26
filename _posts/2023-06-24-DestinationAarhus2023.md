@@ -1,7 +1,7 @@
 ---
 author: 1
 title: Destination Aarhus CTF 2023
-date: 2024-06-24
+date: 2023-06-24
 categories: [CTF]
 tags: [ctf]
 ---
