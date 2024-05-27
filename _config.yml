@@ -16,7 +16,7 @@ timezone: Europe/Copenhagen
 
 title: Claus Malver # the main title
 
-tagline: CTF Writeups and more (Soon:tm:) # it will display as the sub-title
+tagline: CTF Writeups and more # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Personal site for displaying CTF write up and notes from various projects, mostly related to cybersecurity.
