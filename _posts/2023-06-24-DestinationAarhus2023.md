@@ -1,5 +1,5 @@
 ---
-author: claus
+author: clausmalver
 title: Destination Aarhus CTF 2023
 description: A CTF event hosted in 4 major cities in Denmark. Odense, Aalborg, Copenhagen and Aarhus. The event was created by Destination Aarhus, Systematic, Lego, Cyberskills.dk, De Danske Cybermesterskaber and Aalborg University.
 date: 2023-11-17
