@@ -1,6 +1,6 @@
 # clausmalver.github.io
 
-Github repo for my website, using Githus Pages and its integration with Jekyll providing auto CI/CD pipelines for publishing.
+Github repo for my website, using Github Pages and its integration with Jekyll providing auto CI/CD pipelines for publishing.
 
 ## Links
 
