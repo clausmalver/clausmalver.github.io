@@ -1,5 +1,5 @@
 ---
-author: 1
+author: claus
 title: Enabling RSAT tools for Powershell
 description: How to enable the RSAT tools in a closed enviroment.
 date: 2024-05-28
