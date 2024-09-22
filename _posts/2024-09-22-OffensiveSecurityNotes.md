@@ -1,10 +1,10 @@
 ---
 author: clausmalver
-title: Notes for Offensive Security
-description: Page for quick glance notes for offensive security.
-date: 2024-09-21
-categories: [Notes, hacking]
-tags: [webexploitation, powershell]
+title: Offensive Security Cheatsheet
+description: A note for quick glances anything related for offensive security.
+date: 2024-09-22
+categories: [Notes, Hacking]
+tags: [linux, powershell, hacking, offensive]
 ---
 ## Clone a website
 
@@ -17,7 +17,11 @@ Clone a website including images, css, etc.
 ## Reverse shells
 [Reverse Shell Generator](https://www.revshells.com/)
 
-## Alfa Networks
+## Wireless
+
+Collection of notes regarding wireless attack or similar.
+
+### Alfa Networks
 
 Get USB wifi adapter into monitor mode
 
@@ -30,9 +34,13 @@ Check if adapter is in monitor mode:
 
 `iwconfig wlan0`
 
-### Monitor using Kismet
+### Wifi monitor using Kismet
 
 `kismet -c wlan0 -p ~/log_directory -t output_file`
+
+### Wifi monitor using airodump
+
+`sudo airodump-ng wlan0`
 
 ### Deauth attacks
 
@@ -46,4 +54,12 @@ sudo wifi-deauth -i <iface>
 ```
 
 Remember to let it run for a bit so the app can collect clients it can deauth
+
+### Kill interfering processes using wifi adapter
+
+List possible interfering procceses
+`sudo airmon-ng check`
+
+Kill them
+`sudo airmon-ng check kill`
 
