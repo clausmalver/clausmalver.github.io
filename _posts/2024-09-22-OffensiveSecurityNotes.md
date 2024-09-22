@@ -44,18 +44,18 @@ Check if adapter is in monitor mode:
 
 ### Deauth attacks
 
-https://github.com/flashnuke/wifi-deauth
+[wifi-deauth](https://github.com/flashnuke/wifi-deauth) - Python script for deauthing attacks
 
 Install and run on system
 ```
 git clone https://github.com/flashnuke/wifi-deauth.git
 sudo pip3 install .
-sudo wifi-deauth -i <iface>
+sudo wifi-deauth -i <wireless interface>
 ```
 
 Remember to let it run for a bit so the app can collect clients it can deauth
 
-### Kill interfering processes using wifi adapter
+### Stop interfering processes using airmon-ng
 
 List possible interfering procceses
 `sudo airmon-ng check`
