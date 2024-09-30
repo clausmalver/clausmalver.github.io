@@ -30,7 +30,7 @@ sudo ifconfig wlan0 down
 sudo iwconfig wlan0 mode monitor
 sudo ifconfig wlan up
 ```
-Check if adapter is in monitor mode:
+Check if adapter is in monitor mode
 
 `iwconfig wlan0`
 
