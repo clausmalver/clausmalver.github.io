@@ -1,6 +1,6 @@
 ---
 author: clausmalver
-Title: Sublime Text - Settings, Keybindings, and Tips & Tricks
+Title: Sublime Text | Settings, Keybindings, and Tips & Tricks
 description: Settings that I change with a new install of Sublime Text, along with some additional tips and tricks to enhance it a bit.
 date: 2024-10-19
 categories: [Notes, Misc]
