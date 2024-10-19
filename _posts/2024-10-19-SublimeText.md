@@ -1,13 +1,11 @@
 ---
 author: clausmalver
-title: Sublime Text, settings, keybindings and tips and tricks
+Title: Sublime Text - Settings, Keybindings, and Tips & Tricks
 description: Settings that I change with a new install of Sublime Text, along with some additional tips and tricks to enhance it a bit.
 date: 2024-10-19
 categories: [Notes, Misc]
 tags: [sublimetext, misc, notes]
 ---
-# Sublime Text
-
 Below are the settings I use that give me the best look and feel of Sublime Text.
 
 ## Custom settings
@@ -38,7 +36,9 @@ Below are the settings I use that give me the best look and feel of Sublime Text
 
 Install the package from Github.
 
-`ctrl`+`shift`+`p` -> Browse Packages -> Enter `powershell` in the adress bar and copy in the line below.
+1. `ctrl`+`shift`+`p` 
+2. Browse Packages 
+3. Enter `powershell` in the adress bar and copy in the line below.
 ```
 git clone https://github.com/catppuccin/sublime-text.git Catppuccin
 ```
@@ -46,7 +46,9 @@ git clone https://github.com/catppuccin/sublime-text.git Catppuccin
 ## Fold Python
 Package that lets you fold Python code for better visibility and management.
 
-`ctrl`+`shift`+`p` -> Package Control: Install Package -> Install `Fold Python`
+1. `ctrl`+`shift`+`p`
+2. Package Control: Install Package
+3. Install `Fold Python`
 
 ## Tips and trick
 
@@ -55,7 +57,9 @@ Select multiple lines at once.
 2. `ctrl`+`shift`+`l`
 
 Move the selected line:
+
 `ctrl`+`shift`+`up arrow` (or `down arrow`)
 
 Select text within the following `()`, `{}` or `[]`.
+
 `ctrl`+`m`
