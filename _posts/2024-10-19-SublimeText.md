@@ -1,7 +1,7 @@
 ---
 author: clausmalver
-title: Sublime Text - Settings, Keybindings, and Tips & Tricks
-description: Settings that I change with a new install of Sublime Text, along with some additional tips & tricks to enhance the daily use of it.
+title: Sublime Text
+description: Settings and keybindings that I change with a new install of Sublime Text, along with some additional tips & tricks to enhance the daily use of it.
 date: 2024-10-19
 categories: [Notes, Misc]
 tags: [sublimetext, misc, notes]
