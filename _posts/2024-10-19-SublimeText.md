@@ -1,6 +1,6 @@
 ---
 author: clausmalver
-Title: Sublime Text
+title: Sublime Text
 description: Settings and keybindings that I change with a new install of Sublime Text, along with some additional tips & tricks to enhance the daily use of it.
 date: 2024-10-19
 categories: [Notes, Misc]
@@ -19,7 +19,7 @@ Below are the settings I use that give me the best look and feel of Sublime Text
 	"caret_style": "phase",
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
-    "translate_tabs_to_spaces": true,
+	"translate_tabs_to_spaces": true,
 	"color_scheme": "Catppuccin Mocha.sublime-color-scheme",
 }
 ```
