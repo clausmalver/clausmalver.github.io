@@ -1,7 +1,7 @@
 ---
 author: clausmalver
-Title: Sublime Text | Settings, Keybindings, and Tips & Tricks
-description: Settings that I change with a new install of Sublime Text, along with some additional tips and tricks to enhance it a bit.
+Title: Sublime Text
+description: Settings and keybindings that I change with a new install of Sublime Text, along with some additional tips & tricks to enhance the daily use of it.
 date: 2024-10-19
 categories: [Notes, Misc]
 tags: [sublimetext, misc, notes]
@@ -10,7 +10,7 @@ Below are the settings I use that give me the best look and feel of Sublime Text
 
 ## Custom settings
 
-`ctrl`+`shift`+`p` -> Settings -> paste in the json below
+`ctrl`+`shift`+`p` -> Settings -> paste in the `json` below:
 ```json
 {
 	"font_size": 16,
@@ -25,7 +25,7 @@ Below are the settings I use that give me the best look and feel of Sublime Text
 ```
 ## Custom keybindings
 
-`ctrl`+`shift`+`p` -> Keybindings -> paste in the json below
+`ctrl`+`shift`+`p` -> Keybindings -> paste in the json below:
 ```json
 [
 		{ "keys": ["ctrl+m"], "command": "toggle_comment", "args": { "block": false } },
@@ -38,7 +38,7 @@ Install the package from Github.
 
 1. `ctrl`+`shift`+`p` 
 2. Browse Packages 
-3. Enter `powershell` in the adress bar and copy in the line below.
+3. Enter `powershell` in the adress bar and copy in the line below:
 ```
 git clone https://github.com/catppuccin/sublime-text.git Catppuccin
 ```
