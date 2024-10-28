@@ -74,6 +74,8 @@ Set interface to monitor
 Kill all processes that uses the interface
 `sudo airmon-ng check kill`
 
+Note: `systemctl start NetworkManager` to start the Network services again
+
 Start monitoring and get BBSID and channel you need to attack.
 `sudo airomon-ng wlan0`
 
