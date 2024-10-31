@@ -67,9 +67,11 @@ Kill them
 
 Set interface to monitor
 
-`sudo ifconfig wlan0 down`
-`sudo iwconfig wlan0 mode monitor`
-`sudo ifconfig wlan0 up`
+```bash
+sudo ifconfig wlan0 down
+sudo iwconfig wlan0 mode monitor
+sudo ifconfig wlan0 up
+```
 
 Kill all processes that uses the interface
 `sudo airmon-ng check kill`
