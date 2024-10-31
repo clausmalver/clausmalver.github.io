@@ -76,8 +76,11 @@ Kill all processes that uses the interface
 
 Note: `systemctl start NetworkManager` to start the Network services again
 
-Start monitoring and get BBSID and channel you need to attack.
-`sudo airomon-ng wlan0`
+Start monitoring on the interface
+`sudo airomon-ng [INTERFACE]`
+
+Start capture on all channels
+`airodump-ng [INTERFACE]`
 
 Specify the BSSID and Channel, and start capture the handshake
 `airodump-ng -c [CHANNEL] --bssid [MAC ADRESS] -w [OUTPUTFILE] wlan0`

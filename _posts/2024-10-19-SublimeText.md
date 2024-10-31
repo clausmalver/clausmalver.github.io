@@ -19,7 +19,6 @@ Below are the settings I use that give me the best look and feel of Sublime Text
 	"caret_style": "phase",
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
-	"translate_tabs_to_spaces": true,
 	"color_scheme": "Catppuccin Mocha.sublime-color-scheme",
 }
 ```
