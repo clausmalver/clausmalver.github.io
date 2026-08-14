@@ -1,11 +1,7 @@
----
-author: clausmalver
-title: Ngrok - Set up a quick website (or maybe catch a reverse shell)
-description: Set up Ngrok to serve a Python3 webserver or catch a reverse shell on Ubuntu, ideal for CTFs or quick web deployments.
-date: 2024-12-16
-categories: [Notes, Misc]
-tags: [ngrok, misc, notes]
----
+# Ngrok - Set up a quick website (or maybe catch a reverse shell)
+
+*Published 2024-12-16*
+
 ## Why would you need to setup Ngrok?
 Sometimes it’s useful to serve a small webserver to the internet, or, during a CTF competition, to catch a reverse shell. Normally, you wouldn’t open your computer to the open internet. Instead, you can use Ngrok. This small guide will take you through setting up Ngrok on an Ubuntu Desktop running 24.01 LTS.
 

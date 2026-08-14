@@ -1,11 +1,7 @@
----
-author: clausmalver
-title: Enabling RSAT tools for Powershell
-description: How to enable the RSAT tools in a closed enviroment.
-date: 2024-05-28
-categories: [Notes, Powershell]
-tags: [rsat, powershell]
----
+# Enabling RSAT tools for Powershell
+
+*Published 2024-05-28*
+
 When installing RSAT Tools, you may encounter the error Error 0x800F0954. This occurs because the system cannot contact the Windows Update server, as the computers are set up to download updates from a WSUS server. This error will occur regardless of whether you install via the GUI (Settings - Apps - Optional features - Add a feature - RSAT: Active Directory Domain Services and Lightweight Directory Services Tools) or via PowerShell. To resolve this, follow these steps:
 
 1. Open _regedit_ as an admin and navigate to:
@@ -37,7 +33,7 @@ If you only need specific packages, follow these steps:
    Get-WindowsCapability -Name RSAT* -Online
    ```
 
-2. Run this command and insert the package you need in _<tool name>_:
+2. Run this command and insert the package you need in `<tool name>`:
    ```Powershell
    Add-WindowsCapability -online -Name "<tool name>"
    ```

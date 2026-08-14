@@ -1,11 +1,6 @@
----
-author: clausmalver
-title: Huntress CTF 2024
-description: Huntress held its second CTF competition this year for Cybersecurity Awareness Month, which lasted throughout October. This was my second time participating. With 4,763 points, I achieved 182nd place out of 3,446 teams, with a total of 7,365 players — a result I'm quite proud of, considering that last year, with 1,850 points, I reached 419th place out of 4,212 teams.
-date: 2024-11-01
-categories: [CTF]
-tags: [ctf, Huntress]
----
+# Huntress CTF 2024
+
+*Published 2024-11-01*
 
 ## Read the Rules
 *Author: @JohnHammond*

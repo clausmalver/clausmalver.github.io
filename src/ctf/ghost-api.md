@@ -1,11 +1,6 @@
----
-author: clausmalver
-title: Ghost API - Hackinghub.io
-description: 
-date: 2025-04-08
-categories: [CTF]
-tags: [ctf, Hackinghub.io]
----
+# Ghost API - Hackinghub.io
+
+*Published 2025-04-08*
 
 # Ghost API writeup from hackinghub.io
 For this CTF challenge, we are given the endpoint `https://z5dgz12o.eu2.ctfio.com/api/userInfo/showUserDetails/jrodriguez75` (please note that the endpoint might difer from mine due to the instance spawned). The objective is to leak confidential information from the API. There is no authorization required to access it, making it a case of an IDOR (Insecure Direct Object References) vulnerability. If you want to know more about IDOR vulnerabilities you can check these out: [OWASP IDOR Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html) or [Portswigger IDOR](https://portswigger.net/web-security/access-control/idor)

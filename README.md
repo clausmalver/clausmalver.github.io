@@ -1,15 +1,17 @@
 # clausmalver.github.io
 
-Github repo for my website, using Github Pages and its integration with Jekyll providing auto CI/CD pipelines for publishing.
+Github repo for my website, built with [mdBook](mdbook) and deployed to Github Pages via Github Actions.
 
-## Links
+## Structure
 
-[Setup Github Pages with Jekyll](pages)
+- `src/` — book content (`SUMMARY.md` is the table of contents)
+- `book.toml` — mdBook configuration
+- `.github/workflows/pages-deploy.yml` — builds the book and deploys it to Github Pages
 
-[Chirpy Theme for Jekyll](chirpy)
+## Local development
 
-[Wiki for Chirpy](wiki)
+```bash
+mdbook serve
+```
 
-[pages]: https://github.com/cotes2020/chirpy-static-assets
-[chirpy]: https://code.visualstudio.com/
-[wiki]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
+[mdbook]: https://rust-lang.github.io/mdBook/

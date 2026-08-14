@@ -1,11 +1,6 @@
----
-author: clausmalver
-title: BrunnerCTF 2025 - Tickets App (User) & Tickets App (Root)
-description: 
-date: 2025-08-25
-categories: [CTF]
-tags: [ctf, BrunnerCTF]
----
+# BrunnerCTF 2025 - Tickets App (User) & Tickets App (Root)
+
+*Published 2025-08-25*
 
 This writeup is for the [BrunnerCTF 2025](https://brunnerctf.dk/) tournament which was held from 22/08/2025 14:00 CEST to 24/08/2025 14:00 C EST with almost 3000 players and 1500 teams participating. We play for the CTF team Jutlandia which is based in Aalborg, Denmark. We are a team consisting of players with diverse backgrounds, ranging from students to those who work with IT on a daily basis. This challenge was a joined effort by c3lphie, ajstemp, Ruttimads and me. Our team placed 15th on the international leaderboard and a 3rd place on the Danish leaderboard.
 
@@ -67,17 +62,17 @@ This challenge combines multiple techniques to escalate from an ordinary user on
 ## First part - Tickets App (User)
 When you first launch the instance you are presented with a webpage, where you are able to secure a ticket to some of the our favourite events! We for sure would have won in a bake-off competition with our infamous “Othello Lagkage” against other unnamed participants 👀
 
-![Frontpage](/assets/img/brunner/Frontpage.png)
+![Frontpage](../img/brunner/Frontpage.png)
 
 On the frontpage you can either register an account or login with an account. We created an account with the following credentials `test:test` which allow us to gain access to the dashboard `https://tickets-app-user-3eea27441b01d05c.challs.brunnerne.xyz/dashboard`
 
 When the account is created, the backend generates a JWT token for the account that provide the server with the username and privilege on the website as seen on the screenhot from Firefox
 
-![JWT token.png](/assets/img/brunner/JWTtoken.png)
+![JWT token.png](../img/brunner/JWTtoken.png)
 
 When you start to analyse the JWT token, there is a slight hint that it might be crackable, since it's signature verification failed accordingly to [jwt.io](https://www.jwt.io/).
 
-![jwt.io](/assets/img/brunner/jwt.io.png)
+![jwt.io](../img/brunner/jwt.io.png)
 
 ### JWT Manipulation
 
@@ -114,7 +109,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNzU2MDI1OTkwLCJ
 
 After successfully generating the jwt token we can swap it with our current one and gain access to the admin panel and a new search function is available for us to look into. When you search for an user, it reach out to an API endpoint `https://tickets-app-user-3eea27441b01d05c.challs.brunnerne.xyz/api/search?name=*` which lead us to do some basic enumeration of the website, we found this endpoint `https://tickets-app-user-3eea27441b01d05c.challs.brunnerne.xyz/api/docs/` that might could become handy later.
 
-![API Docs](/assets/img/brunner/apidocs.png)
+![API Docs](../img/brunner/apidocs.png)
 
 From the swagger file we can see there is a endpoint, that lets us upload a python file to the website and then it will execute it. This function of the website might let us to generate a reverse shell and catch it. To do that we need an API key which we don't have yet.
 
@@ -206,11 +201,11 @@ curl -X PUT \                       
 
 To be able to catch the reverse shell, you can set up a ngrok instance or whatever tool that is to your liking and then catch it with an listener `nc -lvnp 4444` remember to change your payload accordingly depending on the service you use.
 
-![Reverse Shell](/assets/img/brunner/revshell.png)
+![Reverse Shell](../img/brunner/revshell.png)
 
 Now that we have established our connection, we can begin the search for the first flag. We kept getting the http logs, which were quite annoying, unfortunately we weren’t able to get rid of them. When you land on the box the flag is in the current directory, we are able to cat out the `user.txt` file and get the flag to complete the first challenge:
 
-![User flag](/assets/img/brunner/user.txt.png)
+![User flag](../img/brunner/user.txt.png)
 
 **Flag: brunner{fr0nt_r0w_t1ck3ts_f0r_brunn3r_4nd_b455}**
 ## Second part - Tickets App (Root)
@@ -227,11 +222,11 @@ chmod +x linpeas.sh
 
 Now that we have linpeas.sh on the box, lets try to find something useful from it. The output below, stood out to us and could indicate a vulnerability on the box.
 
-![Linpeas](/assets/img/brunner/linpeas.png)
+![Linpeas](../img/brunner/linpeas.png)
 
 We can see from the output from linpeas.sh that the binary `syslog-manager` could be of great interest, so we started to look into that by look at what it can do. On the screenshot below can you see how you can use the binary.
 
-![Syslog-Manager](/assets/img/brunner/syslogmanager.png)
+![Syslog-Manager](../img/brunner/syslogmanager.png)
 
 ### Reverse Engineering
 
@@ -310,6 +305,6 @@ The reason why this trick works is because the syslog-manager (that have SUID ro
 
 To gain the flag we just run the `syslog-manager clean` command and it will output the flag to our webhook.
 
-![Root flag](/assets/img/brunner/rootflag.png)
+![Root flag](../img/brunner/rootflag.png)
 
 **Flag: brunner{sl1pp3d_p4st_s3cur17y_4nd_g0t_b4cks74g3_4cc3ss}**

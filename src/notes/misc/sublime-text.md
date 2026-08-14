@@ -1,11 +1,7 @@
----
-author: clausmalver
-title: Sublime Text
-description: Settings and keybindings that I change with a new install of Sublime Text, along with some additional tips & tricks to enhance the daily use of it.
-date: 2024-10-19
-categories: [Notes, Misc]
-tags: [sublimetext, misc, notes]
----
+# Sublime Text
+
+*Published 2024-10-19*
+
 Below are the settings I use that give me the best look and feel of Sublime Text.
 
 ## Custom settings

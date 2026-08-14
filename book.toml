@@ -1,0 +1,14 @@
+[book]
+title = "Claus Malver"
+authors = ["Claus Malver"]
+description = "CTF writeups and notes from various projects, mostly related to cybersecurity."
+language = "en"
+src = "src"
+
+[output.html]
+git-repository-url = "https://github.com/clausmalver/clausmalver.github.io"
+default-theme = "navy"
+preferred-dark-theme = "navy"
+
+[output.html.search]
+enable = true

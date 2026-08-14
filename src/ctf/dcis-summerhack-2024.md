@@ -1,11 +1,7 @@
----
-author: clausmalver
-title: DCIS Summerhack 2024
-description: I recently participated in the DCIS Summer Hack CTF event in July 2024, tackling various cybersecurity puzzles in categories like Boot2Root, Forensics, and Web Exploitation.
-date: 2024-07-31
-categories: [CTF]
-tags: [ctf, dcis]
----
+# DCIS Summerhack 2024
+
+*Published 2024-07-31*
+
 # DCIS Summerhack 2024
 
 I recently took part in the DCIS Summer Hack CTF event hosted by DCIS in July 2024. It was a fun and challenging competition where I tackled various cybersecurity puzzles and scenarios, including the categories like Boot2Root, Forensics, and Web Exploitation among others.

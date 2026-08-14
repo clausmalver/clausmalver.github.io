@@ -1,11 +1,7 @@
----
-author: clausmalver
-title: Nahamcon CTF 2024
-description: This CTF event, organized by Ben Sadeghipour (aka Nahamsec) https://www.youtube.com/@NahamSec, took place from May 23rd, 12:00 PM PST to May 25th, 12:00 PM PST, 2024, running for a total of 48 hours. The competition featured contributions from notable people in the infosec community, including Husky Hacks and John Hammond.
-date: 2024-05-25
-categories: [CTF]
-tags: [ctf, nahamcon]
----
+# Nahamcon CTF 2024
+
+*Published 2024-05-25*
+
 This CTF event, organized by Ben Sadeghipour (aka Nahamsec) https://www.youtube.com/@NahamSec, took place from May 23rd, 12:00 PM PST to May 25th, 12:00 PM PST, 2024, running for a total of 48 hours. The competition featured contributions from notable people in the infosec community, including Husky Hacks and John Hammond.
 
 Husky Hacks - https://www.youtube.com/@huskyhacks
