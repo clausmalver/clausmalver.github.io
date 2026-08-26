@@ -5,6 +5,7 @@
 
 # CTF Writeups
 
+- [BrunnerCTF 2026 - Baked In](./ctf/brunner2026_baked_in.md)
 - [De Danske Cybermesterskaber 2026](./ctf/ddc-2026.md)
 - [BrunnerCTF 2025 - Tickets App](./ctf/brunnerctf-2025.md)
 - [Ghost API - Hackinghub.io](./ctf/ghost-api.md)
