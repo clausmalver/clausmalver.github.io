@@ -84,11 +84,11 @@ To begin with, I normally just look around a bit to see if anything interesting 
 
 ![Autopsy](../img/brunner26/autopsy_mail.png)
 
-In the emails from that sender there is an attachment, `results-from-judges.ods`, which is a spreadsheet in an open format. The first step is to extract this file using Autopsy: just right-click it and extract it to your VM. It is always good practice to use a VM for this kind of challenge, since you never know beforehand whether a file you are about to open is malicious. When the spreadsheet is opened, it comes with a warning about a macro.
+In the emails from that sender there is an attachment, `results-from-judges.ods`, which is a spreadsheet in an open format. The first step is to extract this file using Autopsy: just right-click it and extract it to your VM. It is always good practice to use a VM for this kind of challenge, since you never know beforehand whether a file you are about to open is malicious. When the spreadsheet is opened, it comes with a warning about a macro, so that is a natural place to start looking.
 
 ![Macro in results-from-judges.ods](../img/brunner26/macro.png)
 
-The content of the macro is this:
+The full content of the macro is:
 
 ```text
 Function a1(Optional ByVal v As Variant) As String
@@ -453,11 +453,15 @@ You can reach the same conclusion with `strings .gnome-scache`, which shows a lo
 
 With the binary extracted, the next question was what it actually does, and the most direct way to find out is to run it. Remember that this should only be done inside a VM.
 
+We knew from the notes earlier that the binary needed the argument from the document properties to run properly.
+
 The first run didn't appear to do anything. We ran it again with `COREHOST_TRACE=1` to get more detail:
 
 `COREHOST_TRACE=1 ./.gnome-scache iAOC5E/kZo090/MaLKq0F4TXhdQ77V1QBOxGVg/2t5eAuFlSKXjpFmjgIlOwLM0y`
 
 ![COREHOST_TRACE output showing the .NET host startup](../img/brunner26/corehost.png)
+
+The trace didn't give us much more to work with, but `gnome-cache-helper.dll` showed up again, which told us the DLL was where to look next.
 
 ## Reversing the .gnome-cache
 Reverse engineering the `.gnome-scache` binary was a challenge in itself, since much of it was obfuscated by being stripped.
