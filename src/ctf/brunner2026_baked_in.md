@@ -488,4 +488,4 @@ Flag: `brunner{h1dd3n_ingr3d13nts_1n_th3_r3c1p3}`
 - Apparently you can run .NET on Linux ¯\\\_(ツ)\_/¯
 - It is fun to take on a challenging CTF without AI. The flags feel a lot more rewarding at the end.
 
-**A big shoutout to Brunner for putting on an awesome CTF. It was a blast, and I'm already looking forward to next year!**
+**A big shoutout to Brunnerne for putting on an awesome CTF. It was a blast, and I'm already looking forward to next year!**
