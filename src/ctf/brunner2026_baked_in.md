@@ -1,13 +1,13 @@
 # BrunnerCTF 2026 - Baked In
 Author: atlas
 
-This writeup is for BrunnerCTF 2026, which ran from 21/08/2026 14:00 CEST to 23/08/2026 14:00 CEST with almost 3,000 players and 1,500 teams participating, much like last year. We play for the CTF team [Jutlandia](https://jutlandia.club), based in Aalborg, Denmark. Our team consists of players from diverse backgrounds, ranging from students to people who work in IT every day. This challenge was a joint effort between c3lphie and me.
+This writeup is for [BrunnerCTF 2026](https://danmark.brunnerctf.dk/), which ran from 21/08/2026 14:00 CEST to 23/08/2026 14:00 CEST with 3,000 players and 1,500 teams participating, much like last year. I play for the CTF team [Jutlandia](https://jutlandia.club), based in Aalborg, Denmark. Our team consists of players from diverse backgrounds, ranging from students to people who work in IT every day. This challenge was a joint effort between c3lphie and me.
 
 We placed 5th on the Danish leaderboard, which was the leaderboard eligible for prizes during the competition. It also came with a strict "no AI" rule: to stay eligible for the prizes, worth over 200,000 DKK in combined retail value, you could not use AI tools during the competition at all.
 
 The writeup is therefore also a look at how to solve a challenge when you aren't allowed to use AI in any of its forms, including the annoying Gemini summaries in Google searches.
 
-This writeup is our contribution to the "writeup" challenge, which runs after the competition closes. To be clear: we are allowed to use AI for this part, to fix grammar and readability.
+This writeup is my contribution to the "writeup" challenge, which runs after the competition closes. To be clear: we are allowed to use AI for this part, to fix grammar and readability.
 
 # Final Scoreboard:
 
@@ -51,7 +51,7 @@ This writeup is our contribution to the "writeup" challenge, which runs after th
 - 🔹  BrunnerCTF 2026 T-shirts
 
 <details>
-<summary>**🎖️  6TH-10TH PLACE:**</summary>
+<summary>🎖️  6TH-10TH PLACE:</summary>
 
 - 6th: Bricked devices - 10,429 pts
 - 7th: Valdyr - 9,623 pts
@@ -306,7 +306,7 @@ At first glance it looks suspicious, since it is obfuscated in several ways. Ins
 
 Below is a snippet of the deobfuscated macro along with the information we gathered while working through it, which should make it a little easier to follow.
 
-Since there was a strict no-AI rule for the whole competition, we only reversed as much as was necessary to get a good understanding of what was happening. I suspect this part of the challenge would have gone a lot faster with AI.
+Since the strict no-AI rule for the competition, we only reversed as much as was necessary to get a good understanding of what was happening. I would assume this part of the challenge would have gone a lot faster with AI.
 
 
 ```text
@@ -467,6 +467,8 @@ The DLL of interest was `gnome-cache-helper.dll`, which looks custom-made for th
 With the DLL open in [dnSpyEx](https://github.com/dnspyex), a debugger and .NET assembly editor, we could see we were close to the end goal. dnSpyEx decompiles the `.dll` back into readable code, which is far easier than picking apart the stripped ELF binary by hand. An AI agent hooked up to Ghidra over MCP might have sped things up here too, though by this point we already knew the DLL was the part we cared about. The manual `strings` pass got us there just as fast, so the end result would likely have been the same either way.
 
 ![gnome-cache-helper.dll open in dnSpyEx, showing the hardcoded AES key and IV](../img/brunner26/dnspy.png)
+
+The "malware" in this competition is defanged for obvious reasons. There is no need to ship real malware in a CTF, since a competitor who isn't careful might end up running it on their primary system. This sample "just" drops a third-stage payload that runs `sleep infinity`, along with a persistence technique that makes sure it runs at every startup. We did actually spot evidence of that in the `linux.psscan.PsScan` output, but we didn't pay it much attention at the time.
 
 As the screenshot shows, the DLL contains a hardcoded AES key, `Br0nn3rB4k3ryK3y`, and an IV (initialisation vector) of `CTF2026BrunnerIV`. That gives us everything we need to decrypt the argument that came from the spreadsheet: `iAOC5E/kZo090/MaLKq0F4TXhdQ77V1QBOxGVg/2t5eAuFlSKXjpFmjgIlOwLM0y`.
 
