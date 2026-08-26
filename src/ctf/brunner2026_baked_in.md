@@ -470,6 +470,8 @@ With the DLL open in [dnSpyEx](https://github.com/dnspyex), a debugger and .NET 
 
 The "malware" in this competition is defanged for obvious reasons. There is no need to ship real malware in a CTF, since a competitor who isn't careful might end up running it on their primary system. This sample "just" drops a third-stage payload that runs `sleep infinity`, along with a persistence technique that makes sure it runs at every startup. We did actually spot evidence of that in the `linux.psscan.PsScan` output, but we didn't pay it much attention at the time.
 
+## The final piece
+
 As the screenshot shows, the DLL contains a hardcoded AES key, `Br0nn3rB4k3ryK3y`, and an IV (initialisation vector) of `CTF2026BrunnerIV`. That gives us everything we need to decrypt the argument that came from the spreadsheet: `iAOC5E/kZo090/MaLKq0F4TXhdQ77V1QBOxGVg/2t5eAuFlSKXjpFmjgIlOwLM0y`.
 
 Paste it all into CyberChef and there it is:
@@ -485,3 +487,5 @@ Flag: `brunner{h1dd3n_ingr3d13nts_1n_th3_r3c1p3}`
 - Doing memory forensics on a Linux dump teaches you a fair bit about how the underlying system works.
 - Apparently you can run .NET on Linux ¯\\\_(ツ)\_/¯
 - It is fun to take on a challenging CTF without AI. The flags feel a lot more rewarding at the end.
+
+**A big shoutout to Brunner for putting on an awesome CTF. It was a blast, and I'm already looking forward to next year!**
