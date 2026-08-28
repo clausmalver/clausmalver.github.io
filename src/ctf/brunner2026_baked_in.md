@@ -463,7 +463,7 @@ The first run didn't appear to do anything. We ran it again with `COREHOST_TRACE
 
 The trace didn't give us much more to work with, but `gnome-cache-helper.dll` showed up again, which told us the DLL was where to look next.
 
-## Reversing the .gnome-cache
+## Reversing the .gnome-scache
 Reverse engineering the `.gnome-scache` binary was a challenge in itself, since much of it was obfuscated by being stripped.
 
 The DLL of interest was `gnome-cache-helper.dll`, which looks custom-made for this binary. We extracted it using [DotNetBundleExtractor](https://github.com/tomrus88/DotNetBundleExtractor), an older project on GitHub, but one that still does the job.
