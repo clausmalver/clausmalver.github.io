@@ -88,7 +88,8 @@ In the emails from that sender there is an attachment, `results-from-judges.ods`
 
 ![Macro in results-from-judges.ods](../img/brunner26/macro.png)
 
-The full content of the macro is:
+<details>
+<summary>If you want to read the full content of the macro you can expand this section:</summary>
 
 ```text
 Function a1(Optional ByVal v As Variant) As String
@@ -299,6 +300,7 @@ Sub Main()
 
 End Sub
 ```
+</details>
 
 ## Obfuscation
 
